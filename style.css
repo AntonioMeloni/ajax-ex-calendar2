@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 .top-calendar,
 .main-calendar {
     width: 700px;
@@ -13,6 +14,12 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.top-calendar{
+  padding: 20px 0;
 }
 
 .name-day-row{
@@ -26,7 +33,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black
+  border-bottom: 1px solid black;
+  margin: 10px 0;
 }
 
 .num-of-day{
@@ -36,10 +44,11 @@
 .btn-navigation {
      padding: 5px 20px;
      border-radius: 5px;
-     background-color: purple;
+     background-color: #4b7bec;
      color: white;
      border: none;
      cursor: pointer;
+     margin-top: 15px;
 }
 
 .btn-navigation:disabled{
@@ -57,6 +66,10 @@
   align-items: center;
   flex-direction: column;
   font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+  transition: .4s;
 }
 
 #calendar li,
@@ -64,9 +77,13 @@
     text-transform: capitalize;
 }
 
-.festivo {
-    color: red;
+#calendar li.festivo {
+    color: tomato;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+}
+
+#calendar li:hover{
+  background-color: lightgreen;
 }
